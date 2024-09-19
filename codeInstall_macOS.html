@@ -193,16 +193,17 @@
 					<li>The Millennium-I and Millennium-II treefiles have been pre-packaged into different sets,depending on how much of the simulation volume you want to use. You can choose from:</li>
 					Millennium-I:
 					<ul style="padding-left:40px">
-						<li><a href="https://uhhpc.herts.ac.uk/~ry22aas/MR_MergerTrees_5.tar"><FONT size="3" COLOR="3388AA"> Treefile 5</FONT></a> [~804 MB] [direct download] Single treefile (minimum test set)</li>
-						<li><a href="https://uhhpc.herts.ac.uk/~ry22aas/MR_MergerTrees_0-9.tar"><FONT size="3" COLOR="3388AA"> Treefiles 0-9</FONT></a> [~7.5 GB] [direct download] 10 treefiles (standard test set)</li>
-						<li><a href="http://galformod.mpa-garching.mpg.de/public/LGalaxies/run_model/MergerTrees/MR_allMergerTrees.tar"><FONT size="3" COLOR="3388AA"> Treefiles 0-511</FONT></a> [~401 GB] [direct download] All treefiles (full volume)</li>
+						<li><a href="https://uhhpc.herts.ac.uk/~ry22aas/MR_MergerTrees_5.tar"><FONT size="3" COLOR="3388AA"> Treefile 5</FONT></a> [~804 MB] Single treefile (minimum test set)</li>
+						<li><a href="https://uhhpc.herts.ac.uk/~ry22aas/MR_MergerTrees_0-9.tar"><FONT size="3" COLOR="3388AA"> Treefiles 0-9</FONT></a> [~7.5 GB] 10 treefiles (standard test set)</li>
+						<li><a href="https://uhhpc.herts.ac.uk/~ry22aas/MR_allMergerTrees.tar"><FONT size="3" COLOR="3388AA"> Treefiles 0-511</FONT></a> [~237 GB compressed, ~401 GB uncompressed] All treefiles (full volume)</li>
+						<!-- <li><a href="http://galformod.mpa-garching.mpg.de/public/LGalaxies/run_model/MergerTrees/MR_allMergerTrees.tar"><FONT size="3" COLOR="3388AA"> Treefiles 0-511</FONT></a> [~401 GB] [direct download] All treefiles (full volume)</li> -->
 						<!-- NOTE: The full set of Millenniium-I treefiles are on the UH-HPC. They would just need to be tarred and made public before a link to them could be put here to replace the link to MPA (06-12-23) -->
 						<!-- <script>document.write("<a href='"+BaseURLGalformod+"run_model/MergerTrees/MR_allMergerTrees.tar'><div id='intermediate_link'>"+"MR_allMergerTrees.tar</div></a>")</script> -->
 					</ul>
 					Millennium-II:
 					<ul style="padding-left:40px">
-						<li><a href="https://uhhpc.herts.ac.uk/~ry22aas/MRII_MergerTrees_40-79.tar"><FONT size="3" COLOR="3388AA"> Treefiles 40-79</FONT></a> [~6.3 GB] [direct download] 40 treefiles (standard test set)</li>
-						<li><a href="https://uhhpc.herts.ac.uk/~ry22aas/MRII_allMergerTrees.tar"><FONT size="3" COLOR="3388AA"> Treefiles 0-511</FONT></a> [~92 GB] [direct download] All treefiles (full volume)</li>
+						<li><a href="https://uhhpc.herts.ac.uk/~ry22aas/MRII_MergerTrees_40-79.tar"><FONT size="3" COLOR="3388AA"> Treefiles 40-79</FONT></a> [~6.0 GB compressed, ~13 GB uncompressed] 40 treefiles (standard test set)</li>
+						<li><a href="https://uhhpc.herts.ac.uk/~ry22aas/MRII_allMergerTrees.tar"><FONT size="3" COLOR="3388AA"> Treefiles 0-511</FONT></a> [~92 GB compressed, ~185 GB uncompressed] All treefiles (full volume)</li>
 					</ul>
 					<li>Download your chosen treefile set either by clicking the link above or in the command line using e.g.:</li>
 					<ul style="padding-left:40px">
@@ -213,19 +214,20 @@
 					<li>In the terminal, navigate to the <b>/MergerTrees</b>.</li>
 					<li>Untar the treefiles:</li>
 					<ul style="padding-left:40px">
-						<li><em>tar -xf ./MR[II]_MergerTrees_[TREEFILE_NUMBERS]</em></li>
+						<li><em>tar -xzf ./MR[II]_MergerTrees_[TREEFILE_NUMBERS]</em></li>
 					</ul>
 					This will create a folder called either <b>/MR/treedata</b>, <b>/MRII/treedata</b>, or <b>/MRII</b> containing the downloaded treefiles.
 					Note that some macOS systems may try to untar your treefiles directly into a folder with the same name as the tar file itself (e.g. /MR_MergerTrees_5). 
 					In this case, you will either have to move the sub-folders inside back up to /MergerTrees, or change the path that L-Galaxies uses to looks for them in the input file (see STEP 7).
 				</ol>	
 			</FONT></p>
+			<!--
 			<br>
 			<p style="line-height:1.5; text-align:center"><FONT size="3">
 				NOTE: Because the full set of Millennium-I treefiles (MR_allMergerTrees.tar) are stored at an "http" address, rather than "https", some browsers may prevent it from being downloaded automatically.
 				To get around this (at least in Chrome), right-click the download link above, select "Save link as..." and confirm a destination folder. Then, if the browser says that the file "can't be downloaded securely", click the up arrow next to the download and select "Keep".
 			</FONT></p>
-			
+			-->
 		</div>	
 	</div>	
 	
