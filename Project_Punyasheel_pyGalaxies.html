@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>pyGalaxies</title>
+    <meta charset="UTF-8">
+  
+    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="topnav.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta charset="UTF-8">
+	<meta name="keywords" content="L-Galaxies, LGalaxies, SAM, galaxy, formation, models">
+	<meta name="author" content="Rob Yates">
+	<meta http-equiv="refresh" content="60">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="google-site-verification" content="HVG7Wn4SVibWVZmkOcxlBdtRj_cuxOHZfftkt2KPCkg" />
+
+	<meta property="og:title" content="Project: pyGalaxies"/>
+	<meta property="og:description" content="L-Galaxies Model of Galaxy Formation"/>
+	<meta property="og:url" content="https://lgalaxiespublicrelease.github.io">
+	<meta property="og:image" content="https://lgalaxiespublicrelease.github.io/front.png">
+
+	<link rel="icon" href="./front.png">
+
+	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script> var BaseURLGalformod = "http://galformod.mpa-garching.mpg.de/public/LGalaxies/";</script>
+    
+</head>
+
+<body style="font-family:Arial;color:#3B3B3C">
+
+	<!-- top navigation panel -->
+	<script src="topnav.js"></script>
+
+	<div class="top_logo">
+		<div class="my_heading1">Project: pyGalaxies</div>		
+		<div id="top_logo_mask1"> </div>
+		<div id="top_logo_mask2"> </div>
+		<div id="top_logo_mask3"> </div>
+		<div id="top_logo_mask4"> </div>
+	</div> 
+  
+  	<div class="main_box">  
+
+		<div class="main_box_top">	
+			<p>Status</p>
+		</div>
+		
+		<div class="main_box_text_box">  
+			<p style="font-size:1em; line-height:1.5; text-align:center">
+			  	Ongoing
+				<br>
+				<!-- Python front end complete, together with routines for cooling, star formation (including star formation histories) and feedback.  
+				Have begun to convert the physics routines back into C, using ctypes to enable them to be called from the python front-end.  This 
+				seems to work fine, so simply needs to be extended to cover all the required physics modules. -->
+        
+			</p>
+					
+		</div>	
+	</div>	
+	  
+		
+	
+	<div class="main_box">  
+
+		<div class="main_box_top">	
+			<p>Collaborators</p>
+		</div>
+		
+		<div class="main_box_text_box">  
+			<p style="font-size:1em; line-height:1.5; text-align:center">
+			   Paurush Punyasheel, Rob Yates, Will Roper, Peter Scicluna
+			</p>
+					
+		</div>	
+	</div>	
+	
+	
+	
+	<div class="main_box">  
+
+		<div class="main_box_top">	
+			<p>Description</p>
+		</div>
+		
+		<div class="main_box_text_box">  
+			<p style="font-size:1em; line-height:1.5; ">
+			  <!-- The purpose of this project is create a python front-end for L-galaxies to make the reading in of parameters much easier (and definable at run time) and to simply the I/O.  At the same time, the code has been restructured so as to process (sub)halos from past to present, one snapshot at a time, so that a maximum of 2 snapshots need to be stored in memory at any given time.<br>
+			  The halos and subhalos are stored as python lists of instances of halo and subhalo classes.  The galaxies are stored in numpy arrays within each snapshot.  All data is output in HDF files.<br>
+			  The majority of the physics is carried out by the usual L-galaxies C-routines that will be given headers to convert them into python modules that can be imported at run-time (under development). -->
+
+        As our understanding of the Universe becomes more detailed, so do the computational simulations used to model it. This has led to (a) extremely large processing and memory requirements which need supercomputing facilities, 
+        (b) increasingly complex modelling with numerous parameters, and (c) extremely large output datasets which are difficult to handle and interpret. The consequence of this is a rising barrier to access for non-experts, 
+        particularly observational astrophysicists and students who want to use simulations that are comprehensive but intuitive. Such a disconnect between theoretical and observational research would seriously inhibit our progress 
+        in galaxy astrophysics, unless something is done.
+        <br>
+        To tackle this issue, we are devloping of a new kind of galaxy evolution simulation, called pyGALAXIES, inspired by  Peter Thomas' considerable initial work. pyGALAXIES is a modified semi-analytic simulation within the 
+        L-GALAXIES family, designed to be easily adaptable and efficient to run. It already includes a basic python-based front-end to make parameter selection and I/O easier, and the capability to use ‘merger graphs’, rather 
+        than ‘merger trees’, to better describe the structure of the underlying dark matter halo evolution. We will now focus on adding missing phyiscs models, its user-friendliness, and novel ways of optimising performance.
+			</p>
+					
+		</div>	
+	</div>	
+  
+</body>
+</html>
