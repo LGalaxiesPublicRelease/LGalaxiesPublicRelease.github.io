@@ -21,7 +21,7 @@ document.write("  		<!-- Navigation links (hidden by default) -->");
 document.write("  		<div id=\"myLinks\">");
 document.write("   			<a href=\".\/index.html\" style=\"text-align:left;\">Home<\/a>");
 document.write("   			<a href=\"./index.html#DOWNLOADS\">Downloads<\/a>");
-document.write("   			<a href=\"http://gavo.mpa-garching.mpg.de/Millennium/\">SQL_Database<\/a>");
+document.write("   			<a href=\"https://virgodb.cosma.dur.ac.uk:8443/Millennium/\">SQL_Database<\/a>");
 document.write("   			<a href=\".\/team.html\">Team<\/a>");
 document.write("   			<a href=\".\/projects.html\">Projects<\/a>");
 document.write("   			<!-- <a href=\"./workshop2022.html#INSTALLING_THE_CODE\">Installation_Instructions<\/a> -->");
