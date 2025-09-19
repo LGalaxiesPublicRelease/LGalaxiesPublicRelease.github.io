@@ -4,7 +4,7 @@ document.write("	<div class=\"top_nav\" >");
 document.write("		<table>");
 document.write("		<tr>");
 document.write("			<td class=\"top_nav\" style=\"align:left;\"><a href=\".\/index.html\" style=\"text-align:left;\">Home<\/a><\/td>");
-document.write(" 			<td class=\"top_nav\" style=\"align:right;\"><a href=\"./index.html#DOWNLOADS\">Downloads<\/a><a href=\"http://gavo.mpa-garching.mpg.de/Millennium/\">SQL_Database<\/a><a href=\".\/team.html\">Team<\/a><a href=\".\/projects.html\">Projects<\/a><a href=\"./installation_instructions.html\">Installation_Instructions<\/a><a href=\".\/contact.html\">Contact<\/a><\/td>");
+document.write(" 			<td class=\"top_nav\" style=\"align:right;\"><a href=\"./index.html#DOWNLOADS\">Model_Downloads<\/a><a href=\"https://virgodb.cosma.dur.ac.uk:8443/Millennium/\">SQL_Database<\/a><a href=\".\/team.html\">Team<\/a><a href=\".\/projects.html\">Projects<\/a><a href=\"./installation_instructions.html\">Installation_Instructions<\/a><a href=\".\/contact.html\">Contact<\/a><\/td>");
 document.write("		<\/tr>");
 document.write("		<\/table>");
 document.write("	<\/div>");
