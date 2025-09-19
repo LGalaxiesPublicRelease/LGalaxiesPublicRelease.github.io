@@ -20,7 +20,7 @@ document.write("  		");
 document.write("  		<!-- Navigation links (hidden by default) -->");
 document.write("  		<div id=\"myLinks\">");
 document.write("   			<a href=\".\/index.html\" style=\"text-align:left;\">Home<\/a>");
-document.write("   			<a href=\"./index.html#DOWNLOADS\">Model_downloads<\/a>");
+document.write("   			<a href=\"./index.html#DOWNLOADS\">Model_Downloads<\/a>");
 document.write("   			<a href=\"https://virgodb.cosma.dur.ac.uk:8443/Millennium/\">SQL_Database<\/a>");
 document.write("   			<a href=\".\/team.html\">Team<\/a>");
 document.write("   			<a href=\".\/projects.html\">Projects<\/a>");
