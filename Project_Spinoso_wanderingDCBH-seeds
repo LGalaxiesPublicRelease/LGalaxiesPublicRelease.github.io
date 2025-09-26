@@ -16,7 +16,7 @@
 
 	<meta name="google-site-verification" content="HVG7Wn4SVibWVZmkOcxlBdtRj_cuxOHZfftkt2KPCkg" />
 
-	<meta property="og:title" content="Project: Effect of GW recoils on SMBH-seeds evoution"/>
+	<meta property="og:title" content="Project: The failed promise of heavy BH-seeds"/>
 	<meta property="og:description" content="L-Galaxies Model of Galaxy Formation"/>
 	<meta property="og:url" content="https://lgalaxiespublicrelease.github.io">
 	<meta property="og:image" content="https://lgalaxiespublicrelease.github.io/front.png">
@@ -65,7 +65,7 @@
 		
 		<div class="main_box_text_box">  
 			<p style="font-size:1em; line-height:1.5; text-align:center">
-			   Daniele Spinoso, Silvia Bonoli, David Izquierdo-Villalba, Markos Polkas et al.
+			   Daniele Spinoso, David Izquierdo-Villalba, Silvia Bonoli, et al.
 			</p>
 					
 		</div>	
@@ -81,13 +81,11 @@
 		
 		<div class="main_box_text_box">  
 			<p style="font-size:1em; line-height:1.5; ">
-			  We combine the BH-seeding prescription developed on the Henriques+15 version of L-Galaxies (see project: Black Hole seeding)
-        and the model for the ejection of SMBHs via gravitational-recoils presented in Izquierdo-Villalba et al. 2020 (see project:
-        Black Holes). This project aims at studying how the dynamical interactions between SMBHs shape the properties of SMBH populations
-        originatedat high-z, from physically-motivated SMBH-seeding prescriptions. We will focus on the effect of gravitaitonal recoils
-        which follow mergers between massive BHs. Indeed thse gravitational ``kicks'' may be able to eject from their host galaxy a
-        significant fraction of SMBHs, already at z > 7, therefore deeply influencing the following co-evolution of galaxies and SMBH
-        populations across cosmic times.
+			  We use the new L-GalaxiesBH version (Bonoli et al. 2025) to study how the environmental effects imposed by central galaxies
+				onto their lower-mass satellites determines the fate of heavy BH-seeds formed via the direct-collapse scenario. In particular,
+				we study how the dynamics of BHs hosted in disrupted satellites affect the evolution of massive BHs formed through different
+				formation scenarios, predicting that current observations of high-z BHs cannot be explained by the standard picture of
+				heavy BH-seeds formation (i.e. the so-called "close halo pairs" scenario).
 			</p>
 					
 		</div>	
