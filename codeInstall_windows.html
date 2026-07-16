@@ -266,15 +266,21 @@
 				By default, the SYSTYPE variable is set to "Linux".
 				You can change this to the default "cygwin" configuration by commenting-out <em>SYSTYPE = "Linux"</em> at the top of the file and un-commenting <em>SYSTYPE = "cygwin"</em>.
 				This set-up should be suitable for most Windows installations.
-				It assumes the gcc compiler is to be used and that the GSL header files and libraries are stored in their default locations: <b>/usr/local/include</b> and <b>/usr/local/lib</b> (which is where cygwin should have put them).
+				<br>
+				It assumes the gcc compiler is to be used and that the GSL header files and libraries are stored in their default locations (which is where cygwin should have put them).
+				<!-- : <b>/usr/local/include</b> and <b>/usr/local/lib</b> -->
 				If your GSL files are not stored in these locations, you will need to add the <em>GSL_INCL</em> and <em>GSL_LIBS</em> paths accordingly.
-				It also includes the two main HDF5 libaries required to get the HDF5_OUTPUT option working. Depending on your installation you may need to add additional explicit dependencies, such as: -lsz -laec -lz -ldl -lm 
+				<br>
+				Likewise, the "cygwin" configuration also includes the two main HDF5 libaries required to get the HDF5_OUTPUT option working. 
+				Depending on your installation you may need to add additional explicit dependencies, such as: -lsz -laec -lz -ldl -lm 
+				<br>
 				By default, O3 optimization is used. Feel free to add/change the OPTIMIZE flags for your compiler set-up, as you see fit.
 				<br> <br>
-				You can check that gcc and gsl is installed on your system by executing the following commands in a cygwin64 terminal:
+				You can check that gcc, gsl, and hdf5 is installed on your system by executing the following commands in a cygwin64 terminal:
 				<ul style="padding-left:40px">
 					<li><em> cygcheck -cd | grep gcc</em></li>
 					<li><em> cygcheck -cd | grep gsl</em></li>
+					<li><em> cygcheck -cd | grep hdf5</em></li>
 				</ul>
 				<!-- <br>
 				If you wish to set-up your own configuration, with your own compiler and GSL options, feel free to do so!
