@@ -266,14 +266,15 @@
 				By default, the SYSTYPE variable is set to "Linux".
 				You can change this to the default "cygwin" configuration by commenting-out <em>SYSTYPE = "Linux"</em> at the top of the file and un-commenting <em>SYSTYPE = "cygwin"</em>.
 				This set-up should be suitable for most Windows installations.
-				<br>
+				<br> <br>
 				It assumes the gcc compiler is to be used and that the GSL header files and libraries are stored in their default locations (which is where cygwin should have put them).
 				<!-- : <b>/usr/local/include</b> and <b>/usr/local/lib</b> -->
-				If your GSL files are not stored in these locations, you will need to add the <em>GSL_INCL</em> and <em>GSL_LIBS</em> paths accordingly.
-				<br>
+				If your GSL files are not stored in these locations, you will need to add the correct <em>GSL_INCL</em> and <em>GSL_LIBS</em> paths accordingly.
+				Typical locations for GSL files are <b>/usr/include</b> and <b>/usr/lib</b> or <b>/usr/local/include</b> and <b>/usr/local/lib</b>.
+				<br> <br>
 				Likewise, the "cygwin" configuration also includes the two main HDF5 libaries required to get the HDF5_OUTPUT option working. 
 				Depending on your installation you may need to add additional explicit dependencies, such as: -lsz -laec -lz -ldl -lm 
-				<br>
+				<br> <br>
 				By default, O3 optimization is used. Feel free to add/change the OPTIMIZE flags for your compiler set-up, as you see fit.
 				<br> <br>
 				You can check that gcc, gsl, and hdf5 is installed on your system by executing the following commands in a cygwin64 terminal:
@@ -308,9 +309,13 @@
 					<li><b>Multiple tentative definitions:</b> 
 						If a compilation crashes with an error stating that "multiple tenative definitions of a global variable in different compilation units" are not allowed, you may need to add the <em>-fcommon</em> flag to the <em>CC</em> call in <b>My_Makefile_compilers</b>.
 						Note that this flag is set by default when running with SYSTYPE = "cygwin".</li>
-					<li><b>Shared libraries:</b> 
-						If your system has shared GSL libraries (i.e. .so files), rather than local archived ones (i.e. .a files), you may need to replace the default <em>-static</em> flag for <em>GSL_LIBS</em> in <b>My_Makefile_compilers</b> with a <em>-shared</em> flag.
+					<li><b>Shared and static libraries:</b> 
+						Cygwin will usually use shared versions of C libraries`by default. However, if you want to ofrce the use of static libraries instead (i.e. .a files), then add the <em>-static</em> flag for <em>GSL_LIBS</em> in <b>My_Makefile_compilers</b>.
+						Similarly, if you want to force the use of static libraries (i.e. .dll or .so files), then add the <em>-shared</em> instead.
 						You may also find that the GSL libraries are stored in <b>/usr/include</b> and <b>/usr/lib</b> (rather than <b>/usr/local/include</b> and <b>/usr/local/lib</b>), so should update the paths in <b>My_Makefile_compilers</b> accordingly.</li>
+						<!-- If your system has shared GSL libraries (i.e. .so files), rather than local archived ones (i.e. .a files), you may need to replace the default <em>-static</em> flag for <em>GSL_LIBS</em> in <b>My_Makefile_compilers</b> with a <em>-shared</em> flag.
+						You may also find that the GSL libraries are stored in <b>/usr/include</b> and <b>/usr/lib</b> (rather than <b>/usr/local/include</b> and <b>/usr/local/lib</b>), so should update the paths in <b>My_Makefile_compilers</b> accordingly.</li>
+						-->
 					<li><b>Shared object errors:</b> 
 						Similarly, if you are getting errors like: "Relocation R_X86_64_32 against undefined symbol '[LGALAXIES_PARAMETER]' can not be used when making a shared object", 
 						then you may need to add the <em>-fPIC</em> flag to the <em>CC</em> call in <b>My_Makefile_compilers</b></li>
