@@ -304,11 +304,10 @@
 				<ul style="padding-left:40px">
 					<li><em>sudo apt-get install libgsl-dev libgsl-dbg</em></li>
 				</ul>
-				And HDF5 should be installable with something like:
+				And HDF5 (both the standard and high-level HDF5 librarires required) should be installable with something like:
 				<ul style="padding-left:40px">
 					<li><em>sudo apt install libhdf5-dev</em></li>
 				</ul>
-				This shoudl install  both the standard and high-level HDF5 librarires and headers required.
 				
 				If all else fails, you can download the latest version of <em>gcc</em> from <a href="https://mirrorservice.org/sites/sourceware.org/pub/gcc/releases/"><FONT size="3" COLOR="3388AA"> here</FONT></a>, 
 				following the installation instructions provided <a href="https://gcc.gnu.org/install/"><FONT size="3" COLOR="3388AA"> here</FONT></a>.
@@ -316,7 +315,7 @@
 				The latest version of GSL can be downloaded from <a href="https://www.gnu.org/software/gsl/"><FONT size="3" COLOR="3388AA"> here</FONT></a>, 
 				with installation instructions provided in the README and INSTALL files 
 				and general GSL documentation available <a href="https://www.gnu.org/software/gsl/doc/html/index.html"><FONT size="3" COLOR="3388AA"> here</FONT></a>.
-				The latest version of HDF5 can be downloaded from <a href="https://www.hdfgroup.org/solutions/hdf5/"><FONT size="3" COLOR="3388AA"> here</FONT></a>
+				The latest version of HDF5 can be downloaded from <a href="https://www.hdfgroup.org/solutions/hdf5/"><FONT size="3" COLOR="3388AA"> here</FONT></a>.
 				
 				<!-- The latest version of GSL (gsl-2.7.1) can be installed and built as follows (admin rights required):
 				<ol>
@@ -392,7 +391,7 @@
 						Note that this flag is set by default when running with SYSTYPE = "cygwin".</li>
 					<br>
 					<li><b>Shared and static libraries:</b> 
-						Cygwin will usually use shared versions of C libraries`by default. However, if you want to ofrce the use of static libraries instead (i.e. .a files), then add the <em>-static</em> flag for <em>GSL_LIBS</em> in <b>My_Makefile_compilers</b>.
+						Linux will usually use shared versions of C libraries`by default. However, if you want to force the use of static libraries instead (i.e. .a files), then add the <em>-static</em> flag for <em>GSL_LIBS</em> in <b>My_Makefile_compilers</b>.
 						Similarly, if you want to force the use of static libraries (i.e. .dll or .so files), then add the <em>-shared</em> instead.</li>
 					<br>
 					<li><b>Shared object errors:</b> 
