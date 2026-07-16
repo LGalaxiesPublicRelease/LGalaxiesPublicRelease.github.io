@@ -283,9 +283,10 @@
 			</FONT></p>
 			
 			<p style="line-height:1.5; text-align:center"><FONT size="3">
-				Note that if your Linux system runs with a modular environment, you may need to load the GSL libraries before they can be used:
+				Note that if your Linux system runs with a modular environment, you may need to load the GSL and HDF5 libraries before they can be used:
 				<ul style="padding-left:40px">
-					<li><em>module load gsl</em></li>		
+					<li><em>module load gsl</em></li>	
+					<li><em>module load hdf5</em></li>	
 				</ul>
 				You can check which packages are available as modules by running:
 				<ul style="padding-left:40px">
@@ -303,12 +304,19 @@
 				<ul style="padding-left:40px">
 					<li><em>sudo apt-get install libgsl-dev libgsl-dbg</em></li>
 				</ul>
+				And HDF5 should be installable with something like:
+				<ul style="padding-left:40px">
+					<li><em>sudo apt install libhdf5-dev</em></li>
+				</ul>
+				This shoudl install  both the standard and high-level HDF5 librarires and headers required.
+				
 				If all else fails, you can download the latest version of <em>gcc</em> from <a href="https://mirrorservice.org/sites/sourceware.org/pub/gcc/releases/"><FONT size="3" COLOR="3388AA"> here</FONT></a>, 
 				following the installation instructions provided <a href="https://gcc.gnu.org/install/"><FONT size="3" COLOR="3388AA"> here</FONT></a>.
 				Likewise, the <em>make</em> tool can be downloaded from <a href="https://www.gnu.org/software/make/"><FONT size="3" COLOR="3388AA"> here</FONT></a>. 
 				The latest version of GSL can be downloaded from <a href="https://www.gnu.org/software/gsl/"><FONT size="3" COLOR="3388AA"> here</FONT></a>, 
 				with installation instructions provided in the README and INSTALL files 
 				and general GSL documentation available <a href="https://www.gnu.org/software/gsl/doc/html/index.html"><FONT size="3" COLOR="3388AA"> here</FONT></a>.
+				The latest version of HDF5 can be downloaded from <a href="https://www.hdfgroup.org/solutions/hdf5/"><FONT size="3" COLOR="3388AA"> here</FONT></a>
 				
 				<!-- The latest version of GSL (gsl-2.7.1) can be installed and built as follows (admin rights required):
 				<ol>
