@@ -87,8 +87,8 @@
 					</ul>	
 					<li>Decide which branch you wish to download:
 					<ul style="padding-left:40px">
-						<li><b>"master"</b> for the Yates+21a version of L-Galaxies 2020</li>
-						<li><b>"Yates2023"</b> for the Yates+23 version of L-Galaxies 2020 <b>(recommended - contains latest updates)</b></li>
+						<li><b>"master"</b> for the <a href="https://ui.adsabs.harvard.edu/abs/2021MNRAS.503.4474Y/abstract"><FONT size="3" COLOR="3388AA"> Yates+21a</FONT></a> version of L-Galaxies 2020</li>
+						<li><b>"Yates2023"</b> for the <a href="https://ui.adsabs.harvard.edu/abs/2024MNRAS.527.6292Y/abstract"><FONT size="3" COLOR="3388AA"> Yates+24</FONT></a> version of L-Galaxies 2020 <b>(recommended - contains latest updates)</b></li>
 					</ul>
 					<li>Clone the repository:</li>
 					<ul style="padding-left:40px">
@@ -109,8 +109,8 @@
 					<li>Go to <a href="https://github.com/LGalaxiesPublicRelease/LGalaxies2020_PublicRepository"><FONT size="3" COLOR="3388AA"> https://github.com/LGalaxiesPublicRelease/LGalaxies2020_PublicRepository</FONT></a></li>
 					<li>From the drop-down list on the left, select the branch you wish to download:
 					<ul style="padding-left:40px">
-						<li><b>"master"</b> for the Yates+21a version of L-Galaxies 2020</li>
-						<li><b>"Yates2023"</b> for the Yates+23 version of L-Galaxies 2020</li>
+						<li><b>"master"</b> for the <a href="https://ui.adsabs.harvard.edu/abs/2021MNRAS.503.4474Y/abstract"><FONT size="3" COLOR="3388AA"> Yates+21a</FONT></a> version of L-Galaxies 2020</li>
+						<li><b>"Yates2023"</b> for the <a href="https://ui.adsabs.harvard.edu/abs/2024MNRAS.527.6292Y/abstract"><FONT size="3" COLOR="3388AA"> Yates+24</FONT></a> version of L-Galaxies 2020 <b>(recommended - contains latest updates)</b></li>
 					</ul>
 					<li>Click the green "Code" drop-down menu, and select "Download ZIP" [~5-20 MB]</li>
 					<li>Move the downloaded file ([BRANCH_NAME].zip) to a suitable base directory.</li>
@@ -168,7 +168,7 @@
 					</ul>
 					<li>Move the downloaded .tar file into the <b>/MergerTrees</b> directory, which is in the <b>project root directory</b>.</li>
 					<li>Navigate to the <b>/MergerTrees</b>.</li>
-					<li>>Unzip the treefiles</li>
+					<li>Unzip the treefiles</li>
 					This will create a folder called either <b>/MR/treedata</b>, <b>/MRII/treedata</b>, or <b>/MRII</b> containing the downloaded treefiles.
 				</ol>	
 			</FONT></p>
@@ -310,8 +310,8 @@
 						Note that this flag is set by default when running with SYSTYPE = "cygwin".</li>
 					<br>
 					<li><b>Shared and static libraries:</b> 
-						Cygwin will usually use shared versions of C libraries`by default. However, if you want to force the use of static libraries instead (i.e. .a files), then add the <em>-static</em> flag for <em>GSL_LIBS</em> in <b>My_Makefile_compilers</b>.
-						Similarly, if you want to force the use of static libraries (i.e. .dll or .so files), then add the <em>-shared</em> instead.</li>
+						Cygwin will usually use shared versions of C libraries by default. However, if you want to force the use of static libraries instead (i.e. .a files), then add the <em>-static</em> flag for <em>GSL_LIBS</em> in <b>My_Makefile_compilers</b>.
+						Similarly, if you want to force the use of shared libraries (i.e. .dll or .so files), then add the <em>-shared</em> instead.</li>
 					<br>
 					<li><b>Shared object errors:</b> 
 						Similarly, if you are getting errors like: "Relocation R_X86_64_32 against undefined symbol '[LGALAXIES_PARAMETER]' can not be used when making a shared object", 
@@ -363,10 +363,11 @@
 			<br>
 				
 			<p style="line-height:1.5; text-align:center"><FONT size="3">
-				Once L-Galaxies 2020 has finished running, the output file(s) generated will be stored in the <b>/outputs</b> folder.
-				These can be read in to python for analysis as described in STEP 6.<br><br>
 				Straight out of the box, L-Galaxies 2020 will run on treefile 5 of Millennium-I with only redshift 0 data outputted.
-				However, various other standard set-ups are also possible (see STEP 7).
+				So the <b>input_MR_W1_PLANCK_LGals2020_MM.par</b> input file is recommended in this case. 
+				However, various other standard set-ups are also possible (see STEP 7).<br><br>
+				Once L-Galaxies 2020 has finished running, the output file(s) generated will be stored in the <b>/output</b> folder.
+				These can be read in to python for analysis as described in STEP 6.
 			</FONT></p>
 		</div>	
 	</div>	
@@ -377,28 +378,26 @@
 
 <div class="main_box"> 
 		<div class="main_box_top">	
-			<p>STEP 6: Reading-in L-Galaxies 2020 outputs in python</p>
+			<p>STEP 6: Reading-in and plotting outputs in python</p>
 		</div>
 		
-		<div class="main_box_text_box">  		
+		<div class="main_box_text_box">  
 			<p style="line-height:1.5; text-align:center"><FONT size="3">
-				L-Galaxies 2020 comes with a set of simple python scripts to read L-Galaxies output files. These can be found in <b>/AuxCode/Python</b>.
-				To run these python scripts on your L-Galaxies output, simply execute the <b>main_lgals.py</b> file.
-				This will generate a galaxy sample (using the selection criteria discussed below) which is saved to an .npy file in the <b>/output/samples</b> folder. It will also
+				L-Galaxies 2020 comes with a set of simple python scripts to read-in and plot L-Galaxies 2020 output files. These can be found in <b>/AuxCode/Python</b>.
+				To run these python scripts on your outputs, simply execute the <b>main_lgals.py</b> file.
+				This will generate a galaxy sample (using the selection criteria discussed below) which is saved to an .npy file in the <b>/output/samples</b> folder for quick re-use. It will also
 				produce some plots in the <b>/figures</b> folder. To modify how <b>main_lgals.py</b> works, see below.
-				
-				<!-- This is done using the "output structure" provided (see "Changing which properties are outputted" in STEP 7). -->
 			</FONT></p>
 			
 			<br>
-			
+
 			<p style="line-height:1.5; text-align:center"><FONT size="3">
 				<b>Note on HDF5 vs. binary outputs:</b> By default, L-Galaxies 2020 will generate HDF5 output files, and <b>main_lgals.py</b> is set to read them in.
 				This makes things easier than using binary output files, as the structure of the data doesn't need to be known a priori.
-				However, if you prefer to work with binary output files, you can comment-out the <b>HDF5_OUTPUT</b> switch in the L-Galaxies <b>My_Makefile_options</b> file 
-				and set the <b>HDF5_OUTPUT</b> switch in <b>main_lgals.py</b> to 0.
-				The python structure required to read-in binary files is automatically generated by L-Galaxies, and saved in <b>/AuxCode/Python</b> as <b>auto_LGalaxy_struct.py</b>.
-				Setting the STURCT_TYPE option in <b>main_lgals.py</b> to <b>"auto"</b> will use this python structure when reading-in the L-Galaxies binary outputs.
+				However, if you prefer to work with binary output files, you can comment-out the <b>HDF5_OUTPUT</b> switch in the <b>My_Makefile_options</b> file before compiling & running L-Galaxies,
+				and set the <b>HDF5_OUTPUT</b> switch in <b>main_lgals.py</b> to 0 when handling the outputs.
+				Using binary files requires a python structure, which is automatically generated by L-Galaxies and saved in <b>/AuxCode/Python</b> as <b>auto_LGalaxy_struct.py</b>.
+				Setting the STRUCT_TYPE option in <b>main_lgals.py</b> to <b>"auto"</b> will use this python structure when reading-in the L-Galaxies binary outputs.
 				Other standard python structures are also stored in <b>/AuxCode/Python</b>, for reference.
 			</FONT></p>
 						
@@ -407,15 +406,15 @@
 			<p style="line-height:1.5; text-align:center"><FONT size="3">
 				<FONT size="3"><b>Switches</b></FONT>
 				<br>
-				The <b>main_lgals.py</b> file contains a number of switches under "USER DEFINED INPUTS" which can be used to modify how/what data is read-in and made into samples.
+				The <b>main_lgals.py</b> file contains a number of switches under "USER DEFINED INPUTS" which can be used to modify how/what data is read-in and how it's handled.
 				For example:
 				<ul style="padding-left:40px">
-					<li><b>LOAD_SAMPLE:</b> If on, a sample of galaxies is loaded from a a pre-made .npy file. If off, L-Galaxies outputs are read in and a new sample and .npy file are made</li>
-					<li><b>COMBINE_MODELS:</b> If on, Millennium and Millennium-II versions of the same model are combined</li>
-					<li><b>HDF5_OUTPUT:</b> If on (and LOAD_SAMPLE is off), then HDF5 output files from L-Galaxies will be read. If off, binary output files will be read</b></li>
+					<li><b>LOAD_SAMPLE:</b> If on, a sample of galaxies is loaded straight from a pre-generated .npy file (quicker). If off, raw L-Galaxies output files are read-in and a new .npy file is generated.</li>
+					<li><b>COMBINE_MODELS:</b> If on, Millennium-I and Millennium-II versions of the same model are combined.</li>
+					<li><b>HDF5_OUTPUT:</b> If on (and LOAD_SAMPLE is off), then HDF5 output files from L-Galaxies will be read-in. If off, binary output files will be read-in.</b></li>
 					<li><b>STELLAR_MASS_CUT:</b> If on, only galaxies above the value given by <em>StellarMassRes</em> (see below) will be selected.</li>
-					<li><b>CALC_SFH_INFO:</b> If on, star-formation history (SFH) info will be calculated and added to the sample dictionaries. This can be slow, so only use if SFHs are needed</li>
-					<li><b>GENERAL_PLOTS:</b> If on, general plots are produced, such as the SMF, MZR, etc.</li>
+					<li><b>CALC_SFH_INFO:</b> If on, star-formation history (SFH) info will be calculated and added to the sample dictionaries. This can be slow, so only use if SFHs are needed.</li>
+					<li><b>GENERAL_PLOTS:</b> If on, general plots are produced, such as the stellar mass function, mass-metallicity relation, etc.</li>
 					
 				</ul>
 			</FONT></p>
@@ -448,7 +447,7 @@
 					<li><b>All:</b> Simply select all galaxies above the user-defined minimum stellar mass</li>
 					<li><b>Discs:</b> Select disc-dominant, star-forming galaxies only</li>
 					<li><b>ETGs:</b> Select bulge-dominant galaxies below the Star Forming Main Sequence (SFMS) only</li>
-					<li><b>Dwarfs:</b> Select galaxies below log(M*/Msun) = 9.0 but above the subhalo resolution limit only</li>
+					<li><b>Dwarfs:</b> Select galaxies below log(M*/Msun) = 9.0 but above the subhalo resolution limit</li>
 				</ul>
 				For more info on the exact selection criteria for these different sample types, see the <b>make_lgals_sample.py</b> file.
 			</FONT></p>
@@ -456,10 +455,13 @@
 			<br>
 			
 			<p style="line-height:1.5; text-align:center"><FONT size="3">
-				Note that the plots generated by these python scripts require latex syntax for some of the axis labels. 
-				If your Linux installation does not have (la)tex capabilities, you may need to install (some) of the following packages:
+				Note that the plots generated by these python scripts require LaTeX syntax for some of the axis labels. 
+				If your Cygwin installation does not have (La)TeX capabilities, you may need to install (some) of the following additional 
+				packages from the setup-x86_64.exe installer on your system:
 				<ul style="padding-left:40px">
-					<li><em>sudo apt-get install texlive dvipng texlive-latex-extra texlive-fonts-recommended cm-super</em></li>
+					<li><em>texlive</em></li>
+					<li><em>texlive-collection-latexextra</em></li>
+					<li><em>texlive-collection-fontsrecommended</em></li>
 				</ul>
 			</FONT></p>	
 			
@@ -468,11 +470,13 @@
 			<p style="line-height:1.5; text-align:center"><FONT size="3">
 				For more information on how to use/modify these python scripts, feel free to drop me an email (<b>r.yates3 -at- herts.ac.uk</b>).
 			</FONT></p>	
-			
+
+			<!--
 			<p style="line-height:1.5; text-align:center"><FONT size="3">
-				(For those who prefer to handle data in IDL, there are some old IDL scripts available for reading-in/plotting L-Galaxies outputs.
-				If you are interested in these, just drop me an email.)
+				(For those who prefer to handle data in IDL, there are some IDL scripts available for reading-in/plotting L-Galaxies outputs.
+				If you are interested in getting a copy of these, feel free to speak to me at the workshop, or drop me an email.)
 			</FONT></p>
+			-->
 		</div>
 	</div>	
 
@@ -493,16 +497,19 @@
 				Input files (i.e. the .par files) are provided for the Default Model (DM) and Modified Model (MM) versions of L-Galaxies 2020 (see <a href="https://ui.adsabs.harvard.edu/abs/2021MNRAS.503.4474Y/abstract"><FONT size="3" COLOR="3388AA"> Yates+21a</FONT></a> for details).
 				In brief, the Default Model allows the majority of material released by supernovae and stellar winds to mix with the ambient ColdGas before some is blown out as galactic winds.
 				The Modified Model allows the majority of this newly-released material to be directly ejected into the surrounding HotGas, without first mixing with the ColdGas.
+				The Modified Model is recommended, as it more accurately reproduces the chemical evolution of galaxies and their surroundings above redshift 0 (see <a href="https://ui.adsabs.harvard.edu/abs/2021MNRAS.503.4474Y/abstract"><FONT size="3" COLOR="3388AA"> Yates+21a</FONT></a>).
 				<!-- L-Galaxies 2020 has two standard models for the way supernova and stellar wind ejecta is allowed to mix with the gas in and around galaxies. -->
 				<!-- In the "Default Model", galactic outflows are predominanlty of ambient ISM metallicity, whereas in the "Modified Model", galactic outflows are predominantly metal-rich (see the discussion in <a href="https://ui.adsabs.harvard.edu/abs/2021MNRAS.503.4474Y/abstract"><FONT size="3" COLOR="3388AA"> Yates+21a</FONT></a> for more details). -->
 				<!-- These two models each have their own input file (when running on Millennium-I): -->
+				You can select the Default Model or Modified Model by using the an input file with a "DM" or "MM" suffix, respectively.
+				<!--
 				Depending on which model you want to use, the corresponding input file is one of the following:
 				<ul style="padding-left:40px">
 					<li>input_MR_W1_PLANCK_LGals2020_DM.par</li>
 					<li>input_MR_W1_PLANCK_LGals2020_MM.par</li>
 				</ul>
 				Note that these input files are for runs on the Millenium-I merger trees. If you want to run on Millennium-II instead, see below.
-				
+				-->
 			</FONT></p>
 			<br>
 			
@@ -587,6 +594,7 @@
 					<li>Change <em>FileNameGalaxies</em> to an appropriate name. This will be the prefix in the name of the output file(s) that L-Galaxies generates.</li>		
 					<li>Save and close the input file</li>
 					<li>Compile and run L-Galaxies 2020 as described in STEP 5</li>
+					<li>Remember to modify the variables used to read-in L-Galaxies outputs in <b>main_lgals.py</b> too (e.g. the VERSION variable).</li>
 				</ol>
 			</FONT></p>
 			<br>
@@ -601,6 +609,7 @@
 					<li>Set <em>LastFile</em> to the last treefile you wish to use</li>
 					<li>Save and close the input file</li>
 					<li>Compile and run L-Galaxies 2020 as described in STEP 5</li>
+					<li>Remember to modify the variables used to read-in L-Galaxies outputs in <b>main_lgals.py</b> too (i.e. FirstFile and LastFile).</li>
 				</ol>
 			</FONT></p>
 			
@@ -616,7 +625,7 @@
 				<br>
 				<FONT size="5"><b>Model switches</b></FONT>
 				<br>
-				L-Galaxies 2020 comes with a series of pre-defined model options (or "switches") that change e.g. the physics models used, the treefiles used, which properties are tracked/outputted, etc.
+				L-Galaxies 2020 comes with a series of pre-defined model options (or "switches") that change the physics models used, the treefiles used, which properties are tracked/outputted, etc.
 				These switches are defined in the <b>My_Makefile_options</b> file in the project root directory.
 				There meanings should be quite self explanatory, but if you are unsure, feel free to ask!
 				You are also able to add your own switches to your version of the code.
@@ -636,12 +645,15 @@
 							<li><em>#endif //NO_BULGEMASSRINGS_OUTPUT</em></li>
 					</ul>
 					<li>Save and close the code files</li>
+					<!--
 					<li>Open the output structure .py file you are using</li>
 					<li>Remove <em>BulgeMassRings</em> by either setting it to "False" in the <em>properties_used</em> dictionary (at the bottom of the .py file), or directly commenting it out:
 					<ul style="padding-left:40px">
 							<li><em># ('BulgeMassRings',numpy.float32,12),</em></li>
 					</ul>
+					-->
 				</ol>
+				If working with binary output files, this modification will be automatically updated in the python structure saved in <b>/AuxCode/Python/</b> as <b>auto_LGalaxy_struct.py</b> during compilation.
 			</FONT></p>
 			<br>
 					
@@ -649,10 +661,13 @@
 				<br>
 				<FONT size="5"><b>Changing which properties are outputted</b></FONT>
 				<br>
+				<!--
 				The L-Galaxies output structures define which properties are contained in the binary output files.
 				The standard output structures (compatible with python) provided in each of the L-Galaxies 2020 branches are described below.
+				-->
 			</FONT></p>
 
+			<!--
 			<p style="line-height:1.5; text-align:left"><FONT size="3">
 				<b>"master" branch:</b>
 				<ul style="padding-left:40px">
@@ -672,11 +687,10 @@
 						(i.e. if the <em>OUTPUT_RINGS_EXTRA</em> switch is turned on). Similar to the LGalaxy_snapshots_extraSFHs.py structure in the "master" branch.</li>
 				</ul>
 			</FONT></p>
-
+			-->
+			
 			<p style="line-height:1.5; text-align:center"><FONT size="3">				
-				<!--By default (i.e. when in snapshot mode), L-Galaxies 2020 will output the properties listed in the Python-based "output structure" called <b>LGalaxy_snapshots.py</b>, which is in the <b>/AuxCode/awk/output/python</b> directory.
-				The galaxytree equivalent of this, called <b>LGalaxy_galtree.py</b>, is also provided in the same directory.-->
-				You are also free to customise which properties are actually outputted by L-Galaxies 2020.
+				You are free to customise which properties are actually outputted by L-Galaxies 2020.
 				This is done as follows:
 				<ol>
 					<li>Open <b>h_galaxy_output.h</b> in the <b>/code</b> folder</li>
@@ -693,6 +707,7 @@
 							<li><em>// o->BulgeMassRings[ll] = g->BulgeMassRings[ll];</em></li>
 					</ul>
 					<li>Save and close <b>save.c</b></li>
+					<!--
 					<li>Open the output structure .py file you are using</li>
 					<li>In the structure, add/comment-out the property you wish to be outputted/not outputted</li>
 					For example, to remove <em>BulgeMassRings</em>, set it to "False" in the <em>properties_used</em> dictionary (at the bottom of the .py file), or directly comment it out:
@@ -700,8 +715,13 @@
 							<li><em># ('BulgeMassRings',numpy.float32,12),</em></li>
 					</ul>
 					The property in question will now be included/removed from the output file generated by L-Galaxies 2020.
+					-->
 				</ol>
-				Note: The majority of errors occurring when trying to read-in L-Galaxies output binaries into a python script come from a mis-match between the actual output and the output structure.
+				If running with the HDF5_OUTPUT switch on, all your modifications will automatically be known by <b>main_lgals.py</b> when reading-in your newly-generated output files.
+				If running with binary output files, as mentioned above, the python structure required is automatically saved in <b>/AuxCode/Python/</b> as <b>auto_LGalaxy_struct.py</b> during compilation.
+				However, if you are working with a manually-edited python structure of your own, make sure to modify it to reflect the new set of properties you are outputting.
+				<br><br>
+				<b>Note:</b> The majority of errors occurring when trying to read-in L-Galaxies output binaries come from a mis-match between the actual output contents and the python structure!
 				Therefore, make sure you keep your output structure up-to-date with your code!
 			</FONT></p>
 
