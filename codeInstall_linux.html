@@ -724,7 +724,6 @@
 							<li><em>#endif //NO_BULGEMASSRINGS_OUTPUT</em></li>
 					</ul>
 					<li>Save and close the code files</li>
-					<li>If working with binary output files, this modification should be automatically updated in the python structure saved in <b>/AuxCode/Python/</b> as <b>auto_LGalaxy_struct.py</b> during compilation.
 					<!--
 					<li>Open the output structure .py file you are using</li>
 					<li>Remove <em>BulgeMassRings</em> by either setting it to "False" in the <em>properties_used</em> dictionary (at the bottom of the .py file), or directly commenting it out:
@@ -733,7 +732,7 @@
 					</ul>
 					-->
 				</ol>
-				If you are working with an old binar
+				If working with binary output files, this modification will be automatically updated in the python structure saved in <b>/AuxCode/Python/</b> as <b>auto_LGalaxy_struct.py</b> during compilation.
 			</FONT></p>
 			<br>
 					
@@ -741,10 +740,10 @@
 				<br>
 				<FONT size="5"><b>Changing which properties are outputted</b></FONT>
 				<br>
-				As mentioned above, the python structure required to read-in newly-generated output binary files is automatically saved in <b>/AuxCode/Python/</b> as <b>auto_LGalaxy_struct.py</b> during compilation.
-				If HDF5_OUTPUT is switched on
+				<!--
 				The L-Galaxies output structures define which properties are contained in the binary output files.
 				The standard output structures (compatible with python) provided in each of the L-Galaxies 2020 branches are described below.
+				-->
 			</FONT></p>
 
 			<!--
@@ -770,7 +769,7 @@
 			-->
 			
 			<p style="line-height:1.5; text-align:center"><FONT size="3">				
-				You are also free to customise which properties are actually outputted by L-Galaxies 2020.
+				You are free to customise which properties are actually outputted by L-Galaxies 2020.
 				This is done as follows:
 				<ol>
 					<li>Open <b>h_galaxy_output.h</b> in the <b>/code</b> folder</li>
@@ -800,7 +799,7 @@
 				If running with the HDF5_OUTPUT switch on, all your modifications will automatically be known by <b>main_lgals.py</b> when reading-in your newly-generated output files.
 				If running with binary output files, as mentioned above, the python structure required is automatically saved in <b>/AuxCode/Python/</b> as <b>auto_LGalaxy_struct.py</b> during compilation.
 				However, if you are working with a manually-edited python structure of your own, make sure to modify it to reflect the new set of properties you are outputting.
-				
+				<br><br>
 				<b>Note:</b> The majority of errors occurring when trying to read-in L-Galaxies output binaries come from a mis-match between the actual output contents and the python structure!
 				Therefore, make sure you keep your output structure up-to-date with your code!
 			</FONT></p>
